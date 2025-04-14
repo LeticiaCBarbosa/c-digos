@@ -1,0 +1,21 @@
+body {
+    background-color: darkolivegreen;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkorange;
+}
+
+.rodape {
+    color: darkkhaki;
+    font-weight: bold;
+}
+
+#texto {
+    color: floralwhite;
+}
+
+div {
+    background-color: blue;
+}
