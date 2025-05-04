@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O grande cabeçalho</title>
+    <style>
+        header {
+            display: flex; /* Define o cabeçalho como um contêiner flexível */
+            align-items: center; /* Alinha os itens verticalmente ao centro */
+            gap: 10px; /* Espaçamento entre os itens do cabeçalho */
+            background-color: indigo; /* Cor de fundo */
+            padding: 10px; /* Espaçamento interno do cabeçalho */
+            color: white;
+            justify-content: center;
+            flex-direction: column
+        }
+
+        .logotexto {
+            display: flex; /* Define o contêiner como flexível */
+            align-items: center; /* Alinha os itens verticalmente ao centro */
+            gap: 10px; /* Espaçamento entre os itens do cabeçalho */
+        }
+        header img {
+            width: 80px; /* Largura da imagem */
+            height: 80px; /* Altura da imagem */
+        }          
+        
+        nav ul { /* Estilo da lista de navegação */
+            list-style: none; /* Remove os marcadores da lista */
+            justify-content: center; /* Centraliza os itens horizontalmente */
+        }
+        nav ul li { /* Estilo dos itens da lista */
+            display: inline; /* Exibe os itens da lista em linha */
+        }
+
+        nav ul li a { /* Estilo dos links */
+            color: black; /* Cor do texto dos links */
+            text-decoration: none; /* Remove o sublinhado dos links */
+        }
+
+        nav ul li a:hover { /* Estilo do link ao passar o mouse */
+            color: blue; /* Cor do texto ao passar o mouse */
+            text-decoration: underline; /* Sublinha o texto ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logotexto">
+            <img src="imagens/logotipo.png" alt="Logotipo do Grande Site">
+        <h1>O grande site</h1>
+        </div>
+        
+        <nav>
+            <ul> <!-- Lista de navegação -->
+                <li> <a href="#inicio">Inicio</a></li> <!-- Link para a seção de início -->
+                <li> <a href="#sobre">Sobre</a></li>
+                <li> <a href="#servicos">Serviços</a></li>
+                <li> <a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bem vindo ao Grande site </h2>
+            <p>O grande parágrafo inicial</p>
+        </section>
+
+        <section>
+            <h2>Serviços do Grande site</h2>
+            <ul>
+                <li>Consultoria</li>
+                <li>Desenvolvimento</li>
+                <li>Suporte</li>
+                <li>Treinamento</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
