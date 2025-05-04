@@ -5,30 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O grande cabeçalho</title>
     <style>
+
+        * { /* Seleciona todos os elementos */
+            margin: 0;
+            padding: 0;
+        }
+
+        body { /* Estilo do corpo da página */
+            font-family: Arial, sans-serif;
+            line-height: 1.6; /* Altura da linha */
+        }
+
         header {
             display: flex; /* Define o cabeçalho como um contêiner flexível */
             align-items: center; /* Alinha os itens verticalmente ao centro */
             gap: 10px; /* Espaçamento entre os itens do cabeçalho */
             background-color: indigo; /* Cor de fundo */
-            padding: 10px; /* Espaçamento interno do cabeçalho */
+            padding: 100px; /* Espaçamento interno do cabeçalho */
             color: white;
-            justify-content: center;
-            flex-direction: column
+            flex-direction: column 
         }
 
         .logotexto {
-            display: flex; /* Define o contêiner como flexível */
-            align-items: center; /* Alinha os itens verticalmente ao centro */
+            display: flex; /* Alinha horizontalmente, comando maior que o pai (header) */
             gap: 10px; /* Espaçamento entre os itens do cabeçalho */
         }
         header img {
-            width: 80px; /* Largura da imagem */
-            height: 80px; /* Altura da imagem */
+            width: 50px; /* Largura da imagem */
+            height: 50px; /* Altura da imagem */
         }          
         
         nav ul { /* Estilo da lista de navegação */
+            background-color: rgb(173, 173, 240);
+            padding: 10px; /* Espaçamento interno da lista */
             list-style: none; /* Remove os marcadores da lista */
-            justify-content: center; /* Centraliza os itens horizontalmente */
         }
         nav ul li { /* Estilo dos itens da lista */
             display: inline; /* Exibe os itens da lista em linha */
@@ -43,10 +53,62 @@
             color: blue; /* Cor do texto ao passar o mouse */
             text-decoration: underline; /* Sublinha o texto ao passar o mouse */
         }
+
+        footer {
+            background-color: indigo;
+            color: white;
+        }
+
+        footer p {
+            text-align: center; /* Centraliza o texto do rodapé */
+            padding: 2px; /* Espaçamento interno do rodapé */
+        }
+
+        main {
+            padding: 20px;
+        }
+    
+        main section {
+            margin-bottom: 20px; /* Espaçamento entre as seções do conteúdo principal */
+            border: 1px solid black;
+            padding: 8px;
+            background-color: tan;
+        }
+        main section h2 {
+            color: indigo;
+        }
+
+        main ul { /* Estilo da lista de navegação */
+            list-style: none; /* Remove os marcadores da lista */
+        }      
+        
+        #nomeusu {
+            margin-bottom: 10px; /* Espaçamento fixo abaixo do campo de nome */
+        }
+
+        #emailusu {
+            margin-bottom: 10px; /* Espaçamento fixo abaixo do campo de e-mail */
+        }
+
+        #mensag {
+            width: 100%; /* Faz a área de texto ocupar toda a largura disponível */
+            max-width: 200px; /* Define uma largura máxima */
+            resize: none; /* Remove o redimensionamento manual */
+        }
+
+        button {
+            background-color: indigo; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            padding: 1px ; /* Espaçamento interno do botão */
+            cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+        }
+        button:hover {
+            background-color: blue; /* Cor de fundo ao passar o mouse */
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header> <!-- Cabeçalho -->
         <div class="logotexto">
             <img src="imagens/logotipo.png" alt="Logotipo do Grande Site">
         <h1>O grande site</h1>
@@ -62,8 +124,8 @@
         </nav>
     </header>
 
-    <main>
-        <section id="inicio">
+    <main> <!-- Conteúdo -->
+        <section id="inicio"> <!-- Redireciona ao inicio -->
             <h2>Bem vindo ao Grande site </h2>
             <p>O grande parágrafo inicial</p>
         </section>
@@ -77,10 +139,28 @@
                 <li>Treinamento</li>
             </ul>
         </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <label for="nomeusu">Nome: </label>
+            <input type="text" id="nomeusu"><br>
+            <label for="emailusu">Email: </label>
+            <input type="text" id="emailusu"><br>
+            <label for="mensag">Mensagem: </label>
+            <textarea id="mensag" rows="1" oninput="ajustarAltura(this)"></textarea><br> 
+            <button type="button" onclick="enviar()">Enviar</button>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function ajustarAltura(textarea) {
+            textarea.style.height = "auto"; // Reseta a altura para recalcular
+            textarea.style.height = textarea.scrollHeight + "px"; // Ajusta a altura com base no conteúdo
+        }
+    </script>
 </body>
 </html>
