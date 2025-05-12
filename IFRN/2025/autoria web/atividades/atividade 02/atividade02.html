@@ -19,28 +19,29 @@
 
     <hr> 
 
-    <form>
+    <form id="meuForm" onsubmit="gravar(event)">
         <table border="2">
             <tr>
                 <td>Nome do item:</td>
-                <td><input type="text" id="nomeitem" maxlength="50" /></td>
+                <td><input type="text" id="nomeitem" maxlength="50" required /></td>
             </tr>
             <tr>
                 <td>Quantidade:</td>
-                <td><input type="number" id="qtditem" /></td>
+                <td><input type="number" id="qtditem" required /></td>
             </tr>
             <tr>
                 <td>Valor por item:</td>
-                <td><input type="number" id="valoritem" /></td>
+                <td><input type="number" id="valoritem" required /></td>
             </tr>
             <tr>
                 <td>Fornecedor mestre:</td>
-                <td><input type="text" id="fornitem" maxlength="50" /></td>
+                <td><input type="text" id="fornitem" maxlength="50" required /></td>
             </tr>
             <tr>
-                <td>
-                    <button type="button" onclick="gravar()">Gravar</button>
-                    <button type="reset">Limpar</button>
+                <td colspan="2">
+                    <button type="submit">Gravar</button>
+                    <button type="button" onclick="limpar()">Limpar</button>
+
                 </td>
             </tr>
         </table>
@@ -57,8 +58,7 @@
             <th>Quantidade</th>
             <th>Valor por item</th>
             <th>Fornecedor</th>
-            <th>Alterar</th>
-            <th>Excluir</th>
+            <th colspan="2">Funções</th>
         </tr>
         <tbody id="conteudo">
             <tr>
