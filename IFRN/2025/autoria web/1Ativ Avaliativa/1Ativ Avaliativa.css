@@ -1,0 +1,98 @@
+body {
+    padding-left: 15%;
+    background-image: url("Imagens/Fundo.jpg");
+    background-repeat: no-repeat;    
+    background-size: cover;
+    background-attachment: fixed;
+    width: 70%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-image: url("Imagens/Background.jpg");
+    padding: 10px;
+    border-radius: 12px;
+}
+
+h1 {
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    }
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p, li {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+input {
+    border-radius: 12px
+}
+
+textarea {
+    border-radius: 12px
+}
+
+button {
+    height: 40px;
+    width: 70px;
+    font-size: large;
+    border-radius: 12px;
+}
+button:hover {
+    height: 45px;
+    width: 75px;
+    color: blue;
+}
+
+a:hover {
+    color: black;
+}
+
+.alinhar {
+    color: white;
+    display: flex;
+    align-items: center; /* Alinha a imagem com o h1 verticalmente */
+    gap: 12px; /* Espaço entre a imagem e o texto */
+    justify-content: space-between;
+}
+
+.foto {
+    height: 150px;
+    width: 150px;
+}
+
+.comentario {
+    height: 100px;
+    width: 300px;
+}
+
+.whatsapp {
+    color: blue;
+    text-decoration: underline;
+}
+
+.whatsapp:hover {
+    color: black
+}
+
+.whatsapp:hover::after {
+    color: black;
+    content: " - Indisponivel";
+}
+
+.background {
+    background-color: white;
+    border-radius: 12px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
