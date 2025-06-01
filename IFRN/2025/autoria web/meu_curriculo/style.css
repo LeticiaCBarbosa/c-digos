@@ -1,63 +1,68 @@
 body {
     padding-left: 15%;
-    background-image: url("Image/Background.jpg");
-    background-repeat: no-repeat;    
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url("Image/Background.jpg");    
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a área visível sem distorcer. */
+    background-attachment: fixed; /* Faz a imagem de fundo ficar fixa na tela, não move quando o usuário rola a página. */
+
     width: 70%;
-   
+    font-family: 'Lato', sans-serif;
+    color: #333;
 }
 
 header {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo */
-    background-color: grey;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
     padding: 10px;
     border-radius: 12px;
-    position: relative; /* Permite posicionar os elementos */
+    position: relative; /* Permite mover o elemento em relação à sua posição original usando top, right, bottom ou left. */
+    color: white;
 }
 
 h1 {
-    padding: 10px; /* espaço interno */
-    width: fit-content;
-    font-family: 'Arial', Helvetica, sans-serif;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
-    color: white;
-    }
+    padding: 8px;
+    margin: 0;
+}
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 600;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 10px;
+    color: #444;
 }
 
 p, li {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
-input {
-    border-radius: 12px
-}
-
-textarea {
-    border-radius: 12px
+input, textarea {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px;
 }
 
 button {
-    height: 40px;
+    height: 35px;
     width: 70px;
-    font-size: large;
-    border-radius: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
 }
+
 button:hover {
-    height: 45px;
-    width: 75px;
-    color: blue;
+    background-color: #2980b9;
+    transform: scale(1.05);
 }
 
 a:hover {
@@ -66,28 +71,27 @@ a:hover {
 
 .alinhar {
     display: flex;
-    align-items: center; /* Alinha verticalmente os itens dentro do .alinhar */
-    justify-content: center; /* Centraliza o título horizontalmente */
-    flex: 1; /* Faz o título ocupar o espaço restante */
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
 .foto {
-    height: 125px;
-    width: 125px;
-    position: absolute; /* Posiciona a imagem */
-    right: 10px; /* Move a imagem para o canto esquerdo */
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.fotod{
-    height: 125;
-    width: 125px;
-    position: absolute; /* Posiciona a imagem */
-    left: 10px; /* Move a imagem para o canto esquerdo */
+.foto {
+    right: 10px;
 }
 
 .comentario {
-    height: 100px;
-    width: 300px;
+    height: 80px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .whatsapp {
@@ -96,17 +100,19 @@ a:hover {
 }
 
 .whatsapp:hover {
-    color: black
+    color: black;
 }
 
 .whatsapp:hover::after {
-    color: black;
-    content: " - Indisponivel";
+    content: " - Indisponível";
 }
 
 .background {
     background-color: white;
-    border-radius: 12px;
-    padding-left: 5px;
-    padding-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 600px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
