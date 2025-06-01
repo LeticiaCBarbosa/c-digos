@@ -1,24 +1,30 @@
 body {
     padding-left: 15%;
-    background-image: url("Image/Fundo.jpg");
+    background-image: url("Image/Background.jpg");
     background-repeat: no-repeat;    
     background-size: cover;
     background-attachment: fixed;
     width: 70%;
+   
 }
 
 header {
     display: flex;
-    align-items: center;
-    background-image: url("Mecatronica/Background.jpg");
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    background-color: grey;
     padding: 10px;
     border-radius: 12px;
+    position: relative; /* Permite posicionar os elementos */
 }
 
 h1 {
+    padding: 10px; /* espaço interno */
+    width: fit-content;
     font-family: 'Arial', Helvetica, sans-serif;
     font-size: 48px;
     font-weight: bold;
+    color: white;
     }
 
 h2 {
@@ -59,16 +65,24 @@ a:hover {
 }
 
 .alinhar {
-    color: white;
     display: flex;
-    align-items: center; /* Alinha a imagem com o h1 verticalmente */
-    gap: 12px; /* Espaço entre a imagem e o texto */
-    justify-content: space-between;
+    align-items: center; /* Alinha verticalmente os itens dentro do .alinhar */
+    justify-content: center; /* Centraliza o título horizontalmente */
+    flex: 1; /* Faz o título ocupar o espaço restante */
 }
 
 .foto {
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
+    position: absolute; /* Posiciona a imagem */
+    right: 10px; /* Move a imagem para o canto esquerdo */
+}
+
+.fotod{
+    height: 125;
+    width: 125px;
+    position: absolute; /* Posiciona a imagem */
+    left: 10px; /* Move a imagem para o canto esquerdo */
 }
 
 .comentario {
