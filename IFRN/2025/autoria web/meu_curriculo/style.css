@@ -9,6 +9,16 @@ body {
     color: #333;
 }
 
+.background {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 600px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
 header {
     display: flex;
     align-items: center;
@@ -20,9 +30,28 @@ header {
     color: white;
 }
 
+.alinhar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.foto {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.foto {
+    right: 10px;
+}
+
 h1 {
     font-size: 36px;
-    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 8px;
     margin: 0;
 }
@@ -69,25 +98,6 @@ a:hover {
     color: black;
 }
 
-.alinhar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-}
-
-.foto {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.foto {
-    right: 10px;
-}
-
 .comentario {
     height: 80px;
     width: 100%;
@@ -107,12 +117,4 @@ a:hover {
     content: " - Indisponível";
 }
 
-.background {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    margin: 15px auto;
-    max-width: 600px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-}
+
